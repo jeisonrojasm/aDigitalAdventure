@@ -1,0 +1,142 @@
+.login {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 10vw 8vh 10vw;
+}
+
+@media (min-width: 1024px) {
+  .login {
+    gap: 15vh;
+    height: 100%;
+    padding: 10vh 10vw 5vh 10vw;
+  }
+}
+
+.login__principal_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .login__principal_container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+  }
+}
+
+.login__image {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .login__image {
+    display: block;
+    width: 20vw;
+  }
+}
+
+.login__signin_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__title {
+  font-family: var(--monserrat-bold);
+  font-size: var(--_34pxMin480);
+  color: var(--color3);
+  margin: 10vh 0 15vh 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .login__title {
+    font-size: var(--_34pxMin768);
+  }
+}
+
+@media (min-width: 1024px) {
+  .login__title {
+    font-size: var(--_34pxMin1024);
+    margin: 2vh 0 10vh 0;
+  }
+}
+
+.login__input {
+  border: 0.1vw solid var(--color4);
+  padding: 1.5vh 2vw;
+  width: 100%;
+  margin: 1vh 0;
+  background-color: var(--color5);
+  font-family: var(--monserrat-light);
+  font-size: var(--_14pxMin480);
+  color: var(--color3);
+}
+
+.login__input:focus {
+  outline: 0.5vw solid var(--color6);
+}
+
+@media (min-width: 768px) {
+  .login__input {
+    font-size: var(--_14pxMin768);
+    padding: 1vh 1.5vw;
+  }
+  
+  .login__input:focus {
+    outline: 0.3vw solid var(--color6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .login__input {
+    font-size: var(--_14pxMin1024);
+    margin: 0.8vh 0;
+    padding: 1.5vh 0.5vw;
+  }
+
+  .login__input:focus {
+    outline: 0.15vw solid var(--color6);
+  }
+}
+
+.login__signin_button {
+  width: 100%;
+  margin-top: 2vh;
+}
+
+@media (min-width: 1024px) {
+  .login__signin_button {
+    margin-top: 0.8vh;
+  }  
+}
+
+.login__footer_txt {
+  font-family: var(--monserrat-italic);
+  font-size: var(--_12pxMin480);
+  color: var(--color3);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .login__footer_txt {
+    font-size: var(--_12pxMin768);
+  }
+}
+
+@media (min-width: 1024px) {
+  .login__footer_txt {
+    font-size: var(--_12pxMin1024);
+  }
+}
+
+.login__footer_txt--bold{
+  font-family: var(--monserrat-semibold);
+}

@@ -1,0 +1,31 @@
+.button1 {
+  padding: 1.5vh 6vw;
+  border: none;
+  background-color: var(--color8);
+  border-radius: 2vw;
+  font-family: var(--monserrat-semibold);
+  font-size: var(--_14pxMin480);
+  color: var(--color1);
+  cursor: pointer;
+}
+
+.button1:disabled {
+  background-color: var(--color7);
+  cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+  .button1 {
+    padding: 1vh 4vw;
+    border-radius: 1.5vw;
+    font-size: var(--_14pxMin768);
+  }
+}
+
+@media (min-width: 1024px) {
+  .button1 {
+    padding: 1.5vh 6vw;
+    border-radius: 0.8vw;
+    font-size: var(--_14pxMin1024);
+  }
+}
