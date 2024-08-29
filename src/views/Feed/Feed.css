@@ -11,7 +11,7 @@
 
   .feed__aside {
     position: fixed;
-    width: 20vw;
+    width: 17.5vw;
     height: 100%;
     border-right: 0.05vw solid var(--color4);
   }
@@ -158,5 +158,27 @@
 @media (min-width: 1024px) {
   .feed__friends_publications {
     margin-top: 2vh;
+  }
+}
+
+.feed__option_txt {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .feed__option_txt {
+    display: block;
+  }
+
+  .feed__option_element {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-family: var(--monserrat-regular);
+    font-size: var(--_14pxMin1024);
+  }
+
+  .feed__option_element:hover {
+    cursor: pointer;
   }
 }

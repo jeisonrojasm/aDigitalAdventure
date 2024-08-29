@@ -9,8 +9,14 @@ import { onLikeClick } from './PublicationFunctions'
 
 import './Publication.css'
 
-export const Publication = ({ username, userProfilePic, publicationPic, description }) => {
-  const [likes, setLikes] = useState(95)
+export const Publication = ({
+  username,
+  userProfilePic,
+  publicationPic,
+  description,
+  initialLikes
+}) => {
+  const [likes, setLikes] = useState(initialLikes)
   const [alreadyLike, setAlreadyLike] = useState(false)
   return (
     <div className='publication'>

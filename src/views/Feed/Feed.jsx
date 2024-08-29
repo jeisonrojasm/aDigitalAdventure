@@ -29,16 +29,46 @@ const profilePics = [
 const publications = [
   {
     username: 'silviis_ 25',
+    likes: 50,
     userProfilePic: profilePic1,
     publicationPic: publication1Pic,
     description: '¡Qué emoción! Por fin podré ver a mi banda de heavy metal favorita🤘🎸'
   },
   {
     username: 'jeison_ 29',
+    likes: 20,
     userProfilePic: myProfilePic,
     publicationPic: myProfilePic,
     description: '🤘🎸'
   },
+  {
+    username: 'ultimahoracol',
+    likes: 1,
+    userProfilePic: profilePic2,
+    publicationPic: profilePic2,
+    description: 'Vas a tener todo un equipo completo trabajando para ti.'
+  },
+  {
+    username: 'eltiempo',
+    likes: 16,
+    userProfilePic: profilePic3,
+    publicationPic: profilePic3,
+    description: 'Descubre aquí los mejores destinos. Vuelve, tus vacaciones te están esperando!✈️ Obtén un descuento solo por hoy en la ruta bogotá - cartagena. Se aplica solo en la ruta mencionada.'
+  },
+  {
+    username: 'versus_colombia',
+    likes: 8,
+    userProfilePic: profilePic4,
+    publicationPic: profilePic4,
+    description: 'Sígueme para más contenido 🙌🏻'
+  },
+  {
+    username: 'reggaetontapa',
+    likes: 159,
+    userProfilePic: profilePic5,
+    publicationPic: profilePic5,
+    description: 'Debo tomarme algo energético (8)'
+  }
 ]
 
 export const Feed = () => {
@@ -47,22 +77,43 @@ export const Feed = () => {
       <div className='feed__aside'>
         <h1 className='feed__title'>A Digital Adventure</h1>
         <div className='feed__options'>
-          <div>
+          <div className='feed__option_element'>
             <img className='feed__option' src={homeIcon} alt='Icono de inicio' />
+            <p className="feed__option_txt">
+              Inicio
+            </p>
           </div>
-          <div>
+
+          <div className='feed__option_element'>
             <img className='feed__option' src={searchIcon} alt='Icono de búsqueda' />
+            <p className="feed__option_txt">
+              Buscar
+            </p>
           </div>
-          <div>
+
+          <div className='feed__option_element'>
             <img className='feed__option' src={cameraIcon} alt='Icono de foto' />
+            <p className="feed__option_txt">
+              Crear publicación
+            </p>
           </div>
-          <div>
+
+          <div className='feed__option_element'>
             <img className='feed__option' src={envelopeIcon} alt='Icono de mensajes' />
+            <p className="feed__option_txt">
+              Chat
+            </p>
           </div>
-          <div className='feed__option_container'>
-            <div className='feed__option_subcontainer'>
-              <img className='feed__option_img' src={myProfilePic} alt='Icono de mi perfil' />
+
+          <div className='feed__option_element'>
+            <div className='feed__option_container'>
+              <div className='feed__option_subcontainer'>
+                <img className='feed__option_img' src={myProfilePic} alt='Icono de mi perfil' />
+              </div>
             </div>
+            <p className="feed__option_txt">
+              Perfil
+            </p>
           </div>
         </div>
       </div>
@@ -82,6 +133,7 @@ export const Feed = () => {
                 userProfilePic={publication.userProfilePic}
                 publicationPic={publication.publicationPic}
                 description={publication.description}
+                initialLikes={publication.likes}
               />
 
             ))
