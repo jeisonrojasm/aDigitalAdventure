@@ -9,5 +9,5 @@ export const onPasswordChange = (e, formValues, setFormValues) => {
 }
 
 export const onSigninClick = (navigate) => {
-  navigate()
+  navigate('home')
 }

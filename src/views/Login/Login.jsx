@@ -44,7 +44,7 @@ export const Login = () => {
           <Button1
             text={loginStrings.buttonTxt1}
             style={'login__signin_button'}
-            disabled={true}
+            disabled={false}
             onClick={() => onSigninClick(navigate)}
           />
         </form>

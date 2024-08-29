@@ -1,0 +1,50 @@
+.story,
+.story__container {
+  width: 15vw;
+  height: 15vw;
+}
+
+.story__container {
+  border: 1vw solid var(--color9);
+}
+
+.story--seen {
+  border: none;
+}
+
+@media (min-width: 768px) {
+
+  .story,
+  .story__container {
+    width: 13vw;
+    height: 13vw;
+  }
+
+  .story__container {
+    border: 0.6vw solid var(--color9);
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .story,
+  .story__container {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .story__container {
+    border: 0.2vw solid var(--color9);
+  }
+}
+
+.story__container {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.story__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
