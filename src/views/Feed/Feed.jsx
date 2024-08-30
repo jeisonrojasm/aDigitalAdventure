@@ -28,46 +28,92 @@ const profilePics = [
 
 const publications = [
   {
+    id: 1,
     username: 'silviis_ 25',
     likes: 50,
     userProfilePic: profilePic1,
     publicationPic: publication1Pic,
-    description: '¡Qué emoción! Por fin podré ver a mi banda de heavy metal favorita🤘🎸'
+    description: '¡Qué emoción! Por fin podré ver a mi banda de heavy metal favorita🤘🎸',
+    comments: [
+      {
+        id: 1,
+        text: 'Te envidioooooo!! Yo también quisiera poder ir',
+        username: 'oscar.rojas5'
+      },
+      {
+        id: 2,
+        text: 'Allá estaremos',
+        username: 'yodaaaa_'
+      },
+      {
+        id: 3,
+        text: 'Será que aún las estan vendiendo?',
+        username: 'channelcita'
+      }
+    ]
   },
   {
+    id: 2,
     username: 'jeison_ 29',
     likes: 20,
     userProfilePic: myProfilePic,
     publicationPic: myProfilePic,
-    description: '🤘🎸'
+    description: '🤘🎸',
+    comments: [
+      {
+        id: 1,
+        text: 'Jajaja qué gracioso',
+        username: '___xd__'
+      }
+    ]
   },
   {
+    id: 3,
     username: 'ultimahoracol',
     likes: 1,
-    userProfilePic: profilePic2,
-    publicationPic: profilePic2,
-    description: 'Vas a tener todo un equipo completo trabajando para ti.'
+    userProfilePic: profilePic1,
+    publicationPic: profilePic1,
+    description: 'Vas a tener todo un equipo completo trabajando para ti.',
+    comments: []
   },
   {
+    id: 4,
     username: 'eltiempo',
     likes: 16,
     userProfilePic: profilePic3,
     publicationPic: profilePic3,
-    description: 'Descubre aquí los mejores destinos. Vuelve, tus vacaciones te están esperando!✈️ Obtén un descuento solo por hoy en la ruta bogotá - cartagena. Se aplica solo en la ruta mencionada.'
+    description: 'Descubre aquí los mejores destinos. Vuelve, tus vacaciones te están esperando!✈️ Obtén un descuento solo por hoy en la ruta bogotá - cartagena. Se aplica solo en la ruta mencionada.',
+    comments: [
+      {
+        id: 1,
+        text: 'Qué mal servicio, no les compren',
+        username: '___xd__'
+      }
+    ]
   },
   {
+    id: 5,
     username: 'versus_colombia',
     likes: 8,
     userProfilePic: profilePic4,
     publicationPic: profilePic4,
-    description: 'Sígueme para más contenido 🙌🏻'
+    description: 'Sígueme para más contenido 🙌🏻',
+    comments: []
   },
   {
+    id: 6,
     username: 'reggaetontapa',
     likes: 159,
-    userProfilePic: profilePic5,
-    publicationPic: profilePic5,
-    description: 'Debo tomarme algo energético (8)'
+    userProfilePic: profilePic1,
+    publicationPic: profilePic1,
+    description: 'Debo tomarme algo energético (8)',
+    comments: [
+      {
+        id: 1,
+        text: 'Hasta el piso',
+        username: 'eltiempo'
+      }
+    ]
   }
 ]
 
@@ -129,13 +175,14 @@ export const Feed = () => {
           {
             publications.map(publication => (
               <Publication
+                key={publication.id}
                 username={publication.username}
                 userProfilePic={publication.userProfilePic}
                 publicationPic={publication.publicationPic}
                 description={publication.description}
                 initialLikes={publication.likes}
+                comments={publication.comments}
               />
-
             ))
           }
 

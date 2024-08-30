@@ -74,6 +74,10 @@
   filter: invert(1);
 }
 
+.feed__option:hover {
+  cursor: pointer;
+}
+
 .feed__option_container {
   width: 7vw;
   height: 7vw;
